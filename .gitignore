@@ -1,6 +1,9 @@
 # Visual Studio 2015 user specific files
 .vs/
 
+# not in final folders and files
+Content/ParagonGideon/
+
 # Compiled Object files
 *.slo
 *.lo
