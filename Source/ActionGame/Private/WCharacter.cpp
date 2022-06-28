@@ -38,11 +38,16 @@ void AWCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponen
 	PlayerInputComponent->BindAxis("Turn", this, &APawn::AddControllerYawInput);
 	PlayerInputComponent->BindAxis("LookUp", this, &APawn::AddControllerPitchInput);
 
+	// attack
+	PlayerInputComponent->BindAction("NormalAttack", IE_Pressed, this, &AWCharacter::NormalAttack);
+
 	// skill
+	PlayerInputComponent->BindAction("CastSkill1", IE_Pressed, this, &AWCharacter::CastSkill1);
 
 }
 
 
+// Movement part
 void AWCharacter::MoveForward(float Value)
 {
 	FRotator ControlRot = GetControlRotation();
@@ -65,3 +70,38 @@ void AWCharacter::MoveRight(float Value)
 }
 
 
+// Attack part
+void AWCharacter::NormalAttack()
+{
+	PlayAnimMontage(NormalAttackAnim);
+
+	GetWorldTimerManager().SetTimer(TimerHandle, this, &AWCharacter::NormalAttack_TimeElapsed, 0.2f);
+
+	// I am not so sure about we need to clear the timer after using or not
+	// I guess the timer will clear itself after running?
+	// Maybe we should clear after a loop?
+	// GetWorldTimerManager().ClearTimer(TimerHandle)
+}
+
+
+void AWCharacter::NormalAttack_TimeElapsed()
+{
+	// pass
+}
+
+
+// Skill part
+void AWCharacter::CastSkill1()
+{
+	PlayAnimMontage(CastSkill1Anim);
+
+	GetWorldTimerManager().SetTimer(TimerHandle, this, &AWCharacter::CastSkill1_TimeElapsed, 0.25f);
+
+	// GetWorldTimerManager().ClearTimer(TimerHandle)
+}
+
+
+void AWCharacter::CastSkill1_TimeElapsed()
+{
+	// pass
+}

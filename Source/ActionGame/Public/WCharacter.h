@@ -22,15 +22,35 @@ public:
 	AWCharacter();
 
 protected:
+	// attached components
 	UPROPERTY(VisibleAnywhere)
 		USpringArmComponent* SpringArmComp;
 
 	UPROPERTY(VisibleAnywhere)
 		UCameraComponent* CameraComp;
 
+	// attack
+	UPROPERTY(EditAnywhere, Category = "Attack")
+		UAnimMontage* NormalAttackAnim;
+
+	// skill-related things
+	UPROPERTY(EditAnywhere, Category = "Skill")
+		UAnimMontage* CastSkill1Anim;
+
+
+	FTimerHandle TimerHandle;
+
 	// movement
 	void MoveForward(float Value);
 	void MoveRight(float Value);
+
+	// cast attack
+	void NormalAttack();
+	void NormalAttack_TimeElapsed();
+	
+	// cast skill
+	void CastSkill1();
+	void CastSkill1_TimeElapsed();
 
 public:	
 	// Called to bind functionality to input
