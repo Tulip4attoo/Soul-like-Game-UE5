@@ -45,7 +45,7 @@ void AWCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponen
 	PlayerInputComponent->BindAction("CastSkill1", IE_Pressed, this, &AWCharacter::CastSkill1);
 
 	// change equipment
-	PlayerInputComponent->BindAction("ChangeEquipment", IE_Pressed, this, &AWCharacter::ChangeEquipment);
+	PlayerInputComponent->BindAction("PrimaryInteract", IE_Pressed, this, &AWCharacter::PrimaryInteract);
 }
 
 
@@ -77,7 +77,7 @@ void AWCharacter::NormalAttack()
 {
 	PlayAnimMontage(NormalAttackAnim);
 
-	GetWorldTimerManager().SetTimer(TimerHandle, this, &AWCharacter::NormalAttack_TimeElapsed, 0.2f);
+	// GetWorldTimerManager().SetTimer(TimerHandle, this, &AWCharacter::NormalAttack_TimeElapsed, 0.2f);
 
 	// I am not so sure about we need to clear the timer after using or not
 	// I guess the timer will clear itself after running?
@@ -97,7 +97,7 @@ void AWCharacter::CastSkill1()
 {
 	PlayAnimMontage(CastSkill1Anim);
 
-	GetWorldTimerManager().SetTimer(TimerHandle, this, &AWCharacter::CastSkill1_TimeElapsed, 0.25f);
+	// GetWorldTimerManager().SetTimer(TimerHandle, this, &AWCharacter::CastSkill1_TimeElapsed, 0.25f);
 
 	// GetWorldTimerManager().ClearTimer(TimerHandle)
 }
@@ -110,7 +110,7 @@ void AWCharacter::CastSkill1_TimeElapsed()
 
 
 // change equipment
-void AWCharacter::ChangeEquipment()
+void AWCharacter::PrimaryInteract()
 {
 
 }

@@ -12,7 +12,7 @@ class USpringArmComponent;
 class USAttributeComponent;
 
 
-UCLASS()
+UCLASS(ABSTRACT)
 class ACTIONGAME_API AWCharacter : public ACharacter
 {
 	GENERATED_BODY()
@@ -45,15 +45,15 @@ protected:
 	void MoveRight(float Value);
 
 	// cast attack
-	void NormalAttack();
-	void NormalAttack_TimeElapsed();
-	
+	virtual void NormalAttack();
+	virtual void NormalAttack_TimeElapsed();
+
 	// cast skill
-	void CastSkill1();
-	void CastSkill1_TimeElapsed();
+	virtual void CastSkill1();
+	virtual void CastSkill1_TimeElapsed();
 
 	// change equipment
-	void ChangeEquipment();
+	void PrimaryInteract();
 
 public:	
 	// Called to bind functionality to input
