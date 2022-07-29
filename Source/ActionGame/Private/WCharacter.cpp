@@ -44,6 +44,8 @@ void AWCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponen
 	// skill
 	PlayerInputComponent->BindAction("CastSkill1", IE_Pressed, this, &AWCharacter::CastSkill1);
 
+	// change equipment
+	PlayerInputComponent->BindAction("ChangeEquipment", IE_Pressed, this, &AWCharacter::ChangeEquipment);
 }
 
 
@@ -104,4 +106,11 @@ void AWCharacter::CastSkill1()
 void AWCharacter::CastSkill1_TimeElapsed()
 {
 	// pass
+}
+
+
+// change equipment
+void AWCharacter::ChangeEquipment()
+{
+
 }

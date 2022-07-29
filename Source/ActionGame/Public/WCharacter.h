@@ -52,6 +52,9 @@ protected:
 	void CastSkill1();
 	void CastSkill1_TimeElapsed();
 
+	// change equipment
+	void ChangeEquipment();
+
 public:	
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
