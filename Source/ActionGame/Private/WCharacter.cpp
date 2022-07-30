@@ -7,6 +7,7 @@
 #include "GameFramework/SpringArmComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "Kismet/KismetMathLibrary.h"
+#include "InteractionComponent.h"
 
 
 // Sets default values
@@ -20,6 +21,8 @@ AWCharacter::AWCharacter()
 	CameraComp->SetupAttachment(SpringArmComp);
 
 	GetCharacterMovement()->bOrientRotationToMovement = true;
+
+	InteractionComp = CreateDefaultSubobject<UInteractionComponent>("InteractionComp");
 
 	bUseControllerRotationYaw = false;
 
@@ -112,5 +115,8 @@ void AWCharacter::CastSkill1_TimeElapsed()
 // change equipment
 void AWCharacter::PrimaryInteract()
 {
-
+	if (InteractionComp)
+	{
+		InteractionComp->PrimaryInteract();
+	}
 }

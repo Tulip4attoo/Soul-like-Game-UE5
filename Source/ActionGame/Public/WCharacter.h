@@ -10,6 +10,7 @@
 class UCameraComponent;
 class USpringArmComponent;
 class USAttributeComponent;
+class UInteractionComponent;
 
 
 UCLASS(ABSTRACT)
@@ -28,6 +29,9 @@ protected:
 
 	UPROPERTY(VisibleAnywhere)
 		UCameraComponent* CameraComp;
+
+	UPROPERTY(VisibleAnywhere)
+		UInteractionComponent* InteractionComp;
 
 	// attack
 	UPROPERTY(EditAnywhere, Category = "Attack")
