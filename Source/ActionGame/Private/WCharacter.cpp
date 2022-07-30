@@ -8,6 +8,7 @@
 #include "GameFramework/CharacterMovementComponent.h"
 #include "Kismet/KismetMathLibrary.h"
 #include "InteractionComponent.h"
+#include "AttributeComponent.h"
 
 
 // Sets default values
@@ -20,13 +21,21 @@ AWCharacter::AWCharacter()
 	CameraComp = CreateDefaultSubobject<UCameraComponent>("CameraComp");
 	CameraComp->SetupAttachment(SpringArmComp);
 
-	GetCharacterMovement()->bOrientRotationToMovement = true;
-
 	InteractionComp = CreateDefaultSubobject<UInteractionComponent>("InteractionComp");
+	AttributeComp = CreateDefaultSubobject<UAttributeComponent>("AttributeComp");
 
+	GetCharacterMovement()->bOrientRotationToMovement = true;
 	bUseControllerRotationYaw = false;
 
 }
+
+
+void AWCharacter::PostInitializeComponents()
+{
+	Super::PostInitializeComponents();
+	AttributeComp->OnHealthChanged.AddDynamic(this, &AWCharacter::OnHealthChanged);
+}
+
 
 
 // Called to bind functionality to input
@@ -118,5 +127,16 @@ void AWCharacter::PrimaryInteract()
 	if (InteractionComp)
 	{
 		InteractionComp->PrimaryInteract();
+	}
+}
+
+
+void AWCharacter::OnHealthChanged(AActor* InstigatorActor,
+	UAttributeComponent* OwningComp, float NewHealth, float Delta)
+{
+	if (NewHealth <= 0.f)
+	{
+		APlayerController* PlayerController = Cast<APlayerController>(GetController());
+		DisableInput(PlayerController);
 	}
 }

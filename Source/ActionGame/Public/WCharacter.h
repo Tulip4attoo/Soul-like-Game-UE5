@@ -9,8 +9,8 @@
 
 class UCameraComponent;
 class USpringArmComponent;
-class USAttributeComponent;
 class UInteractionComponent;
+class UAttributeComponent;
 
 
 UCLASS(ABSTRACT)
@@ -33,6 +33,9 @@ protected:
 	UPROPERTY(VisibleAnywhere)
 		UInteractionComponent* InteractionComp;
 
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Attribute")
+		UAttributeComponent* AttributeComp;
+
 	// attack
 	UPROPERTY(EditAnywhere, Category = "Attack")
 		UAnimMontage* NormalAttackAnim;
@@ -43,6 +46,8 @@ protected:
 
 
 	FTimerHandle TimerHandle;
+
+	virtual void PostInitializeComponents() override;
 
 	// movement
 	void MoveForward(float Value);
@@ -58,6 +63,11 @@ protected:
 
 	// change equipment
 	void PrimaryInteract();
+
+
+	UFUNCTION()
+		void OnHealthChanged(AActor* InstigatorActor,
+			UAttributeComponent* OwningComp, float NewHealth, float Delta);
 
 public:	
 	// Called to bind functionality to input
