@@ -61,6 +61,9 @@ protected:
 	virtual void CastSkill1();
 	virtual void CastSkill1_TimeElapsed();
 
+	virtual void CastSkill2();
+	virtual void CastSkill2_TimeElapsed();
+
 	// change equipment
 	void PrimaryInteract();
 

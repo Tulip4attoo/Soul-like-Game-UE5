@@ -55,6 +55,7 @@ void AWCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponen
 
 	// skill
 	PlayerInputComponent->BindAction("CastSkill1", IE_Pressed, this, &AWCharacter::CastSkill1);
+	PlayerInputComponent->BindAction("CastSkill2", IE_Pressed, this, &AWCharacter::CastSkill2);
 
 	// change equipment
 	PlayerInputComponent->BindAction("PrimaryInteract", IE_Pressed, this, &AWCharacter::PrimaryInteract);
@@ -108,18 +109,23 @@ void AWCharacter::NormalAttack_TimeElapsed()
 void AWCharacter::CastSkill1()
 {
 	PlayAnimMontage(CastSkill1Anim);
-
-	// GetWorldTimerManager().SetTimer(TimerHandle, this, &AWCharacter::CastSkill1_TimeElapsed, 0.25f);
-
-	// GetWorldTimerManager().ClearTimer(TimerHandle)
 }
 
 
 void AWCharacter::CastSkill1_TimeElapsed()
 {
-	// pass
 }
 
+
+void AWCharacter::CastSkill2()
+{
+	PlayAnimMontage(CastSkill1Anim);
+}
+
+
+void AWCharacter::CastSkill2_TimeElapsed()
+{
+}
 
 // change equipment
 void AWCharacter::PrimaryInteract()

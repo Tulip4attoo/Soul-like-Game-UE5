@@ -27,6 +27,15 @@ protected:
 	UPROPERTY(VisibleAnywhere)
 		UCharacterMovementComponent* MovementComp;
 	
+	UPROPERTY(EditAnywhere, Category = "Attack")
+		float NormalAttackTime;
+
+	UPROPERTY(EditAnywhere, Category = "Skill")
+		float CastSkill1Time;
+
+	UPROPERTY(EditAnywhere, Category = "Skill")
+		float CastSkill2Time;
+
 	virtual void BeginPlay() override;
 
 	void NormalAttack() override;

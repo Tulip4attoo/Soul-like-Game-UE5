@@ -33,7 +33,7 @@ void AMKCharacter::NormalAttack()
 {
 	Super::NormalAttack();
 	MovementComp->SetMovementMode(MOVE_None);
-	GetWorldTimerManager().SetTimer(TimerHandle, this, &AMKCharacter::NormalAttack_TimeElapsed, 0.75f);
+	GetWorldTimerManager().SetTimer(TimerHandle, this, &AMKCharacter::NormalAttack_TimeElapsed, NormalAttackTime);
 
 	// I am not so sure about we need to clear the timer after using or not
 	// I guess the timer will clear itself after running?
@@ -56,7 +56,7 @@ void AMKCharacter::CastSkill1()
 {
 	Super::CastSkill1();
 	MovementComp->SetMovementMode(MOVE_None);
-	GetWorldTimerManager().SetTimer(TimerHandle, this, &AMKCharacter::NormalAttack_TimeElapsed, 0.4f);
+	GetWorldTimerManager().SetTimer(TimerHandle, this, &AMKCharacter::NormalAttack_TimeElapsed, CastSkill1Time);
 }
 
 
