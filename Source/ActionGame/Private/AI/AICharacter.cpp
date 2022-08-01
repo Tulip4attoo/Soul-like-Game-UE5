@@ -25,12 +25,9 @@ void AAICharacter::PostInitializeComponents()
 void AAICharacter::OnPawnSeen(APawn* Pawn)
 {
 	AAIController* AIC = Cast<AAIController>(GetController());
-	DrawDebugString(GetWorld(), GetActorLocation(), "PLAYER SPOTTED", nullptr, FColor::Red, 4.f, true);
-
 	if (AIC)
 	{
 		UBlackboardComponent* BBComp = AIC->GetBlackboardComponent();
 		BBComp->SetValueAsObject("TargetActor", Pawn);
-		DrawDebugString(GetWorld(), GetActorLocation(), "PLAYER SPOTTED", nullptr, FColor::White, 4.f, true);
 	}
 }
