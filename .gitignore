@@ -4,6 +4,12 @@
 # not in final folders and files
 Content/Models/mk
 Content/Models/mk_run2
+Content/ThirdPerson
+Content/Characters
+Content/__ExternalActors__
+Content/__ExternalObjects__
+Content/LevelPrototyping
+
 
 # Compiled Object files
 *.slo
