@@ -24,7 +24,7 @@ public:
 
 protected:
 	// attached components
-	UPROPERTY(VisibleAnywhere)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		USpringArmComponent* SpringArmComp;
 
 	UPROPERTY(VisibleAnywhere)
