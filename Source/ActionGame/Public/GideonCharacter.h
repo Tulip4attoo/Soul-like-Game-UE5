@@ -25,7 +25,7 @@ public:
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 protected:
-	UPROPERTY(VisibleAnywhere)
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
 		UCharacterMovementComponent* MovementComp;
 
 	UPROPERTY(EditAnywhere, Category = "Attack")
