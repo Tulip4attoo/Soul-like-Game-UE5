@@ -21,6 +21,7 @@ Click to see an Youtube video
     + Magic Projectile Attack
     + Roll to dodge (soul-like roll)
     + Turning player when attacking.
+    + Animation notify system (mostly for attacking)
 + Lock on target: you could lock and switch target
     + Click to see an Youtube video
 [![Lock On Target](/Readme_Media/Lock_On_Target.png)](https://youtu.be/Rbr8P9_QGOM)
@@ -28,7 +29,7 @@ Click to see an Youtube video
 + Heavy use of Events to drive UI and gameplay reactions.
 + Mix of C++ & Blueprint and how to combine these effectively.
 + AI
-    + 2 types of Minion AIs with Behavior Trees (Roam, See, Get hit react, Chase, Attack).
+    + 2 types of Minion AIs with Behavior Trees: Melee and Ranged (Action list: Roam, See, Get hit react, Chase, Attack).
     + C++ & Blueprint Custom Behavior Trees Nodes
     + EQS for attack/cover locations by AI Powerups
 + UI elements for player attributes and projected widgets for enemy health.
