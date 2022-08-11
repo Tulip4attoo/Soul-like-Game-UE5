@@ -12,11 +12,11 @@ void AMeleeMinion_AIController::BeginPlay()
 	Super::BeginPlay();
 	RunBehaviorTree(BehaviorTree);
 
-	APawn* MyPawn = UGameplayStatics::GetPlayerPawn(this, 0);
-	if (MyPawn)
-	{
-	GetBlackboardComponent()->SetValueAsObject("TargetActor", MyPawn);
-	}
+	// APawn* MyPawn = UGameplayStatics::GetPlayerPawn(this, 0);
+	// if (MyPawn)
+	// {
+	// GetBlackboardComponent()->SetValueAsObject("TargetActor", MyPawn);
+	// }
 
 }
 
