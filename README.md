@@ -10,6 +10,8 @@ The main character is Gideon from Paragon.
 
 # Demo Gameplay
 
+Click to see an Youtube video
+
 [![Gameplay](/Readme_Media/Gameplay_Screenshot.png)](https://youtu.be/-5BREUmPPAA)
 
 # Project Features
@@ -20,6 +22,7 @@ The main character is Gideon from Paragon.
     + Roll to dodge (soul-like roll)
     + Turning player when attacking.
 + Lock on target: you could lock and switch target
+    + Click to see an Youtube video
 [![Lock On Target](/Readme_Media/Lock_On_Target.png)](https://youtu.be/Rbr8P9_QGOM)
 + AttributeComponent (Holding health etc.)
 + Heavy use of Events to drive UI and gameplay reactions.
