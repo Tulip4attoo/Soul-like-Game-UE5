@@ -36,6 +36,10 @@ Click to see an Youtube video
 + UMG Main menu
 
 
-## Game Assets
+# Game Assets
 
 Most of assets are free content on Unreal Marketplace. I also extract and put here some assets from DotA2 (will remove them later).
+
+# Install 
+
+Will add it later. I use 2 plugins so it could be a little bit different from normal build.
