@@ -1,4 +1,4 @@
-# Action Game UE5
+# Soul-like Game UE5
 
 This project is created using both C++ and Blueprint in UE5 (5.0). Most of the base classes are created in C++ and updated details via Blueprint.
 
