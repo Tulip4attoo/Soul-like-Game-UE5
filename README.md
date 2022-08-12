@@ -10,7 +10,7 @@ The main character is Gideon from Paragon.
 
 # Demo Gameplay
 
-Click to see an Youtube video
+Click to see a Youtube video
 
 [![Gameplay](/Readme_Media/Gameplay_Screenshot.png)](https://youtu.be/-5BREUmPPAA)
 
@@ -23,7 +23,7 @@ Click to see an Youtube video
     + Turning player when attacking.
     + Animation notify system (mostly for attacking)
 + Lock on target: you could lock and switch target
-    + Click to see an Youtube video
+    + Click to see a Youtube video
 [![Lock On Target](/Readme_Media/Lock_On_Target.png)](https://youtu.be/Rbr8P9_QGOM)
 + AttributeComponent (Holding health etc.)
 + Heavy use of Events to drive UI and gameplay reactions.
@@ -38,7 +38,7 @@ Click to see an Youtube video
 
 # Game Assets
 
-Most of assets are free content on Unreal Marketplace. I also extract and put here some assets from DotA2 (will remove them later).
+Most of assets are free contents on Unreal Marketplace. I also extract and put here some assets from DotA2 (will remove them later).
 
 # Install 
 
