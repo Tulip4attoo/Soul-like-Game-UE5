@@ -1,7 +1,5 @@
 # Soul-like Game UE5
 
-This project is created using both C++ and Blueprint in UE5 (5.0). Most of the base classes are created in C++ and updated details via Blueprint.
-
 This project was created using both C++ and Blueprint in UE5 (5.0.3). The majority of the base classes are written in C++ and the details are updated using Blueprint.
 
 The main character is Gideon from Paragon.
