@@ -1,6 +1,17 @@
 # Soul-like Game UE5
 
+# Update note on 18 Aug 2022
+
+Before I started it, I had no idea what an ER-like game required. It took me a long time to realize that you need a specific type of animation to make it feel like an ER game. After a difficult period, I am still unable to recreate the feeling of an ER (of course it is too hard, but it is my goal). Yeah, I made this repo to apply for some jobs, but to be honest, I'm not impressed with the outcome, so I doubt it will impress any recruiter.
+
+So, what to do now?
+
+I will extract the model and animation from ER, and put some of them in UE5. Re-create the combat. Yeah, it will take much time but it will produce much better result, I believe.
+
+# Project
+
 This project was created using both C++ and Blueprint in UE5 (5.0.3). The majority of the base classes are written in C++ and the details are updated using Blueprint.
+
 
 The main character is Gideon from Paragon.
 
